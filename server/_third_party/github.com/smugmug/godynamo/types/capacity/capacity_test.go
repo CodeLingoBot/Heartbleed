@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-// Roundtrip some examples
+// TestCapacityMarshal: Roundtrip some examples
 func TestCapacityMarshal(t *testing.T) {
 	s := []string{
 		`{"CapacityUnits":1.00,"TableName":"mytable"}`,

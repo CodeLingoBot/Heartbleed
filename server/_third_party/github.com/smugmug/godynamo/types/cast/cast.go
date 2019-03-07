@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-// AWSParseFLoats normalizes numbers-as-strings for transport.
+// AWSParseFloat: normalizes numbers-as-strings for transport.
 func AWSParseFloat(s string) (string, error) {
 	f, ferr := strconv.ParseFloat(s, 64)
 	if ferr != nil {

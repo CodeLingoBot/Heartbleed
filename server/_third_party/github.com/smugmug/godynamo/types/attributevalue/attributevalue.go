@@ -604,7 +604,7 @@ func (a AttributeValueMap) ToBasicJSON() ([]byte, error) {
 	}
 }
 
-// AttributeValueMapToInterface converts the map into a map of the key names to interface types
+// ToInterface: converts the map into a map of the key names to interface types
 // that do not have type designations, and be marshaled into basic json
 func (a AttributeValueMap) ToInterface() (interface{}, error) {
 	if a == nil {
@@ -640,7 +640,7 @@ func (a *AttributeValue) ToBasicJSON() ([]byte, error) {
 	}
 }
 
-// AttributeValueToInterface strips the AttributeValue type designations and returns a structure
+// ToInterface: strips the AttributeValue type designations and returns a structure
 // that can be marshaled into basic json.
 func (a *AttributeValue) ToInterface() (interface{}, error) {
 	if a == nil {

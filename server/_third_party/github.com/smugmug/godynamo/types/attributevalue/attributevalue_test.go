@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-// Round trip some data. Note the sets have repeated elements...make sure they
+// TestAttributeValueMarshal: Round trip some data. Note the sets have repeated elements...make sure they
 // are eliminated
 func TestAttributeValueMarshal(t *testing.T) {
 	s := []string{
@@ -41,7 +41,7 @@ func TestAttributeValueMarshal(t *testing.T) {
 	}
 }
 
-// Demonstrate the use of the Valid function
+// TestAttributeValueInvalid demonstrates the use of the Valid function
 func TestAttributeValueInvalid(t *testing.T) {
 	a := NewAttributeValue()
 	a.N = "1"
@@ -82,7 +82,7 @@ func TestAttributeValueInvalid(t *testing.T) {
 	}
 }
 
-// Empty AttributeValues should emit null
+// TestAttributeValueEmpty: Empty AttributeValues should emit null
 func TestAttributeValueEmpty(t *testing.T) {
 	a := NewAttributeValue()
 	json_bytes, jerr := json.Marshal(a)
@@ -103,7 +103,7 @@ func TestAttributeValueEmpty(t *testing.T) {
 	_ = fmt.Sprintf("OUT:%v\n", string(json_bytes))
 }
 
-// Test the Insert funtions
+// TestAttributeValueInserts tests the Insert funtions
 func TestAttributeValueInserts(t *testing.T) {
 	a1 := NewAttributeValue()
 	a1.InsertSS("hi")
@@ -118,7 +118,7 @@ func TestAttributeValueInserts(t *testing.T) {
 	_ = fmt.Sprintf("OUT:%v\n", string(json))
 }
 
-// Test the Insert functions
+// TestAttributeValueInserts2 tests the Insert functions
 func TestAttributeValueInserts2(t *testing.T) {
 	a1 := NewAttributeValue()
 	_ = a1.InsertSS("hi")
@@ -160,7 +160,7 @@ func TestAttributeValueInserts2(t *testing.T) {
 	}
 }
 
-// Should fail, a2 is uninitialized
+// TestBadCopy: Should fail, a2 is uninitialized
 func TestBadCopy(t *testing.T) {
 	a1 := NewAttributeValue()
 	_ = a1.InsertSS("hi")
@@ -177,7 +177,7 @@ func TestBadCopy(t *testing.T) {
 	}
 }
 
-// Make sure Valid emits as null
+// TestAttributeValueUpdate: Make sure Valid emits as null
 func TestAttributeValueUpdate(t *testing.T) {
 	a := NewAttributeValueUpdate()
 	a.Action = "DELETE"

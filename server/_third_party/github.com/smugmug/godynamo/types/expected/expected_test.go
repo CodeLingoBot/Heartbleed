@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-// Roundtrip some examples
+// TestExpectedMarshal: Roundtrip some examples
 func TestExpectedMarshal(t *testing.T) {
 	s := []string{
 		`{"MyConstraint1":{"AttributeValueList":[{"S":"a string"}],"ComparisonOperator":"BEGINS_WITH","Value":{"N":"4"},"Exists":true}}`,

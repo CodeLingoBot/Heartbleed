@@ -71,7 +71,7 @@ func NewResponse() *Response {
 	return r
 }
 
-// Some work required to omit empty ConsumedCapacity fields
+// MarshalJSON: Some work required to omit empty ConsumedCapacity fields
 func (r Response) MarshalJSON() ([]byte, error) {
 	if r.ConsumedCapacity.Empty() {
 		var ri response_no_capacity
@@ -101,7 +101,7 @@ func NewResponseItemJSON() *ResponseItemJSON {
 	return r
 }
 
-// Some work required to omit empty ConsumedCapacity fields
+// MarshalJSON: Some work required to omit empty ConsumedCapacity fields
 func (r ResponseItemJSON) MarshalJSON() ([]byte, error) {
 	if r.ConsumedCapacity.Empty() {
 		var ri responseItemJSON_no_capacity

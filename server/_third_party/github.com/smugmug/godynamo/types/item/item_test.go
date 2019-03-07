@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-// Roundtrip some examples
+// TestItemMarshal: Roundtrip some examples
 func TestItemMarshal(t *testing.T) {
 	s := []string{
 		`{"ItemName":{"S":"a string"}}`,

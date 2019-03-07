@@ -49,7 +49,7 @@ type CacheReply struct {
 	Error      string
 }
 
-/* Initialize the cache layer.
+/* Init: Initialize the cache layer.
  * expiration - Go standard duration string, defaults to '10m'
  */
 func Init(expiration string) {
@@ -73,7 +73,7 @@ func Init(expiration string) {
 	}
 }
 
-/* Fetch the record from the Cache.
+/* Check: Fetch the record from the Cache.
  *
  * returns the record and if the record should be considered "OK" to use.
  * An OK record is a valid, non-expired cache stored entry.

@@ -49,7 +49,7 @@ func RetryReq_V4(v ep.Endpoint, amzTarget string) ([]byte, int, error) {
 	return retryReq(reqJSON, amzTarget)
 }
 
-// RetryReq_V4 sends a retry-able request using a JSON serialized request and v4 auth.
+// RetryReqJSON_V4: RetryReq_V4 sends a retry-able request using a JSON serialized request and v4 auth.
 func RetryReqJSON_V4(reqJSON []byte, amzTarget string) ([]byte, int, error) {
 	return retryReq(reqJSON, amzTarget)
 }

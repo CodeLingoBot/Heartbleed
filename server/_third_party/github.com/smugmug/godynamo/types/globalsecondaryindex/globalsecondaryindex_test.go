@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-// Roundtrip some examples
+// TestGlobalSecondaryIndexMarshal: Roundtrip some examples
 func TestGlobalSecondaryIndexMarshal(t *testing.T) {
 	s := []string{`{"IndexName":"LastPostIndex","KeySchema":[{"AttributeName": "ForumName","KeyType":"HASH"},{"AttributeName":"LastPostDateTime","KeyType": "RANGE"}],"Projection": {"ProjectionType": "KEYS_ONLY"},"ProvisionedThroughput": {"ReadCapacityUnits":200,"WriteCapacityUnits":200}}`}
 	for _, v := range s {

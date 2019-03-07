@@ -41,7 +41,7 @@ type PutItem struct {
 	TableName                   string
 }
 
-// NewPut will return a pointer to an initialized PutItem struct.
+// NewPutItem will return a pointer to an initialized PutItem struct.
 func NewPutItem() *PutItem {
 	p := new(PutItem)
 	p.Expected = expected.NewExpected()
@@ -77,7 +77,7 @@ type PutItemJSON struct {
 	TableName                   string
 }
 
-// NewPutJSON will return a pointer to an initialized PutItemJSON struct.
+// NewPutItemJSON: NewPutItemJSON will return a pointer to an initialized PutItemJSON struct.
 func NewPutItemJSON() *PutItemJSON {
 	p := new(PutItemJSON)
 	p.Expected = expected.NewExpected()

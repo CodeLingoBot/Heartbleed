@@ -9,7 +9,7 @@ type Item attributevalue.AttributeValueMap
 
 type item Item
 
-// Item is already a reference type
+// NewItem: Item is already a reference type
 func NewItem() Item {
 	a := attributevalue.NewAttributeValueMap()
 	return Item(a)
